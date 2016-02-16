@@ -3,7 +3,7 @@ var attractor;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  boids.length = 800;
+  boids.length = 500;
   for (var i = 0; i < boids.length; i++) {
     boids[i] = new Boid();
   }
