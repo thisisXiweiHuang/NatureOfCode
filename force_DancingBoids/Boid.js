@@ -50,7 +50,7 @@ var Boid = function(mass) {
     var distance = multiAttraction.mag();
     distance = constrain(distance, 5, 25);
     multiAttraction.normalize();
-    var strengh = (this.G * this.mass * b.mass) / (distance * distance);
+    var strengh = .5(this.G * this.mass * b.mass) / (distance * distance);
     multiAttraction.mult(strengh);
     return multiAttraction;
   };

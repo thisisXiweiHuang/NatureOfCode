@@ -3,7 +3,7 @@ var attractor;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  boids.length = 500;
+  boids.length = 200;
   for (var i = 0; i < boids.length; i++) {
     boids[i] = new Boid();
   }
@@ -21,18 +21,13 @@ function draw() {
 
   //Boid
   for (var i = 0; i < boids.length; i++) {
-    for (var j = 0; j < boids.length; j++) {
-       if (i !== j) {
-         var multiAttraction = boids[j].multiAttraction(boids[i]);
-        boids[i].applyForce(multiAttraction);
-     }
-     }
-    
-    
-    //multi attraction for snowFalkes;
-    //var multiAttraction = boids[i].multiAttraction(boids[j]);
+    // for (var j = 0; j < boids.length; j++) {
+    //   if (i !== j) {
+    //     var multiAttraction = boids[j].multiAttraction(boids[i]);
     //     boids[i].applyForce(multiAttraction);
-    
+    // }
+    // }
+  
     
     // atrrating force from the attractor
     var attraction = attractor.attractionForce(boids[i]);

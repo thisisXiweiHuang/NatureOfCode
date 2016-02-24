@@ -12,7 +12,7 @@ void setup() {
 void draw() {
   background(200);
   for (Pendulum pendulums_ : pendulums) {
-    pendulums_.display();
+    pendulums_.update();
     pendulums_.render();
     pendulums_.gravity();
  
@@ -44,7 +44,7 @@ class Pendulum {
     bob = new PVector(origin.x, radius);
   }
 
-  void display() {
+  void update() {
     bob.x = origin.x+sin(angle)*radius;
     bob.y= origin.y+cos(angle)*radius;
     line(bob.x, bob.y, origin.x, origin.y);
