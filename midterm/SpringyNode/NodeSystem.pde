@@ -23,9 +23,9 @@ class NodeSystem {
       }
     }
 
-    //for (Node n : nodes) {
-    //n.createSpring(birthPlace, distBetween);
-    //}
+    for (Node n : nodes) {
+    n.createSpring(birthPlace, distBetween);
+    }
 
     println(nodes.size());
     
@@ -82,8 +82,8 @@ class NodeSystem {
     for (Node n : nodes) {
       for (Node nOther : nodes) {
         float d= n.distanceTo(nOther);
-        if (d< 220) {
-          stroke(200); 
+        if (d< 100) {
+          stroke(140, 26, 255); 
           strokeWeight(.1); 
           line(n.x, n.y, n.z, nOther.x, nOther.y, nOther.z);
         }
