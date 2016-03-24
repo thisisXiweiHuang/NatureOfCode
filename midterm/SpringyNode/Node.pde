@@ -16,14 +16,14 @@ class Node extends VerletParticle {
 
   void run(float d) {
     render();
-    //updateSpring(d);
+    updateSpring(d);
   }
 
   void render() {
     fill(255);
     stroke(200);
-    strokeWeight(.5);
-    sphereDetail(10);
+    strokeWeight(.2);
+    sphereDetail(8);
     pushMatrix();
     //point(this.x, this.y, this.z);
     translate(this.x, this.y, this.z);

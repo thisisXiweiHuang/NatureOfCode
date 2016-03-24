@@ -25,7 +25,7 @@ void setup() {
 
   ns = new NodeSystem(birthPlace, 600, 100);
   //ss = new ArrayList<NodeSystem>();
-  cam = new PeasyCam(this, width/2-(ns.side-ns.distBetween)/4, height/2-(ns.side-ns.distBetween)/4, 0, 1100); //initialise the peasycam object
+  cam = new PeasyCam(this, width/2-(ns.side-ns.distBetween)/4, height/2-(ns.side-ns.distBetween)/4, 0, 700); //initialise the peasycam object
   cam.setMinimumDistance(200); //set minimum zoom distance
   cam.setMaximumDistance(2000); //set maximum zoom distance
   camera();
@@ -33,17 +33,13 @@ void setup() {
 
 void draw() {
   lights();
-  //for(NodeSystem ns: ss){
-  //  ns.run();
-  //  ns.addNode();
-  //}
-  background(20);
-  blendMode(ADD);
+  background(255, 133, 51);
+  //blendMode(ADD);
   
   pushMatrix();
   translate(width/2-(ns.side-ns.distBetween)/2, height/2-(ns.side-ns.distBetween)/2,-100);
   //cam.rotateX(0.01);
-  cam.rotateY(-0.01);
+  //cam.rotateY(-0.01);
   //cam.rotateZ(-0.005);
   
   ns.run();
